@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<!-- The DOCTYPE declaration defines the document type and version. 
+     In this case, it tells the browser to interpret the page as HTML5. -->
+<html lang="en">
+<!-- The <html> tag is the root element of an HTML page.
+     The "lang" attribute specifies the language of the content, "en" stands for English. -->
+
+<head>
+     <!-- The <head> element contains meta-information (metadata) about the HTML document, like title, character set, etc. -->
+
+     <meta charset="UTF-8">
+     <!-- <meta charset> defines the character encoding for the document. 
+       "UTF-8" is a common encoding that supports all characters. -->
+
+     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+     <!-- <meta name="viewport"> helps make the web page responsive by controlling the layout on mobile devices.
+       The "width=device-width" sets the width of the page to follow the screen width of the device. -->
+
+     <meta name="description" content="An example page covering HTML5 concepts">
+     <!-- <meta name="description"> provides a brief description of the page content for SEO purposes. -->
+
+     <title>HTML5 Example</title>
+     <!-- The <title> element defines the title of the document, which appears on the browser tab. -->
+</head>
+
+<body>
+     <!-- The <body> element contains the visible content of the HTML page. -->
+
+     <header>
+          <!-- The <header> element defines the introductory content or navigation links.
+         Here, it contains a <nav> element for the navigation bar. -->
+
+          <nav>
+               <!-- The <nav> element defines navigation links. 
+           This is where the main navigation for the website goes. -->
+               <ul>
+                    <!-- The <ul> (unordered list) contains list items, which are links in this case. -->
+                    <li><a href="#home">Home</a></li>
+                    <!-- The <li> tag represents a list item. 
+             The <a> tag creates a hyperlink to the "home" section within the same page. -->
+                    <li><a href="#about">About</a></li>
+               </ul>
+          </nav>
+     </header>
+
+     <main>
+          <!-- The <main> element contains the main content of the document, which is unique and central to the page. -->
+
+          <section id="home">
+               <!-- The <section> element defines a thematic grouping of content. 
+           The "id" attribute allows linking to this section. -->
+
+               <article>
+                    <!-- The <article> element is used for self-contained content that could be independently distributable (like blog posts). -->
+
+                    <h1>Welcome to HTML5</h1>
+                    <!-- The <h1> tag defines the main heading for this section. -->
+
+                    <p>This is an example demonstrating various HTML5 features.</p>
+                    <!-- The <p> tag defines a paragraph. -->
+
+                    <figure>
+                         <!-- The <figure> element groups related media content, like images, diagrams, or code snippets. -->
+
+                         <img src="image.jpg" alt="Sample image">
+                         <!-- The <img> tag embeds an image in the page. 
+               The "src" attribute specifies the image source, and "alt" provides alternative text. -->
+
+                         <figcaption>An example image</figcaption>
+                         <!-- The <figcaption> element provides a caption for the <figure> content. -->
+                    </figure>
+
+                    <video controls>
+                         <!-- The <video> element is used to embed a video on the web page.
+               The "controls" attribute adds play, pause, and volume control buttons. -->
+
+                         <source src="video.mp4" type="video/mp4">
+                         <!-- The <source> tag specifies multiple media formats for the <video> element.
+               The browser selects the supported one. -->
+
+                         <track src="subtitles_en.vtt" kind="subtitles" srclang="en" label="English">
+                         <!-- The <track> tag provides text tracks like subtitles or captions for media elements.
+               The "kind" attribute specifies the track type, and "srclang" indicates the language. -->
+
+                         Your browser does not support the video tag.
+                         <!-- Fallback content for browsers that do not support the <video> element. -->
+                    </video>
+               </article>
+          </section>
+
+          <aside>
+               <!-- The <aside> element represents content related to the main content, like sidebars or ads. -->
+               <p>Side content or ads go here.</p>
+          </aside>
+     </main>
+
+     <footer>
+          <!-- The <footer> element defines the footer content, usually containing copyright or links. -->
+          <p>&copy; 2024 HTML5 Example</p>
+          <!-- The <p> tag defines a paragraph. Here, it contains copyright information. -->
+     </footer>
+
+     <form action="/submit" method="post">
+          <!-- The <form> element defines a form for user input.
+         The "action" attribute specifies where the form data should be sent (a URL).
+         The "method" attribute specifies the HTTP method used (POST). -->
+
+          <label for="email">Email:</label>
+          <!-- The <label> element labels the input field, making the form accessible. 
+         The "for" attribute associates the label with the input field by ID. -->
+
+          <input type="email" id="email" name="email" placeholder="Enter your email" required>
+          <!-- The <input> element defines an input field. 
+         The "type" is set to "email" to specify that this field should accept email addresses.
+         "placeholder" provides a hint, and "required" makes it mandatory. -->
+
+          <label for="date">Select Date:</label>
+          <input type="date" id="date" name="date">
+          <!-- An <input> field with "type='date'" allows users to select a date using a date picker. -->
+
+          <label for="range">Select a value:</label>
+          <input type="range" id="range" name="range" min="0" max="100">
+          <!-- An <input> field with "type='range'" creates a slider control to select a value within a range. -->
+
+          <input type="submit" value="Submit">
+          <!-- The "submit" button submits the form data when clicked. -->
+     </form>
+
+     <canvas id="myCanvas" width="200" height="100">
+          <!-- The <canvas> element is used to draw 2D graphics via JavaScript.
+         The "width" and "height" attributes set the size of the canvas. -->
+          Your browser does not support the canvas element.
+          <!-- Fallback content for browsers that do not support the <canvas> element. -->
+     </canvas>
+
+     <script>
+          // The <script> element is used to embed or reference JavaScript code.
+
+          const canvas = document.getElementById('myCanvas');
+          const ctx = canvas.getContext('2d');
+          // getContext('2d') allows you to draw 2D graphics on the canvas.
+
+          ctx.fillStyle = 'green';
+          // Sets the fill color for the canvas shape.
+
+          ctx.fillRect(10, 10, 150, 75);
+          // Draws a rectangle (filled with green) starting at (10,10) with a width of 150px and height of 75px.
+     </script>
+
+</body>
+
+</html>
