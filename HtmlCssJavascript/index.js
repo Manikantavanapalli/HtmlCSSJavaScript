@@ -9,10 +9,10 @@ let uninitialized;    // undefined
 
 console.log(name, age, isStudent, value, uninitialized);
 
-// Type Coercion: Implicit and explicit conversions
-let numString = "123";
-console.log(Number(numString));  // Explicit coercion
-console.log(123 + "");  // Implicit coercion (string concatenation)
+    // Type Coercion: Implicit and explicit conversions
+    let numString = "123";
+    console.log(Number(numString));  // Explicit coercion
+    console.log(123 + " ");  // Implicit coercion (string concatenation)
 
 // 2. Control Flow
 document.getElementById('controlFlowBtn').addEventListener('click', () => {
