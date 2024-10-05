@@ -39,7 +39,7 @@ document.getElementById('functionsBtn').addEventListener('click', () => {
     }
 
     // Function Expression
-    const greetExp = function() {
+    const greetExp = function () {
         console.log("Hello from function expression!");
     };
 
